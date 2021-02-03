@@ -4,7 +4,8 @@ GAA_API_BASE_URL = "https://gaa-api-dev.herokuapp.com"
 function verifyIdToken(url, key){
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", url, false);
-    xmlHttp.setRequestHeader("ID-TOKEN", key);
+	xmlHttp.setRequestHeader("ID-TOKEN", key);
+	xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*")
     xmlHttp.send(null);
     return xmlHttp.responseText;
 }
