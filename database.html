@@ -9,6 +9,8 @@
 		<title>Database</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="google-signin-scope" content="profile email">
+		<meta name="google-signin-client_id" content="49547330958-ngop94cdmpb4bhipqsfnughsjbp0qcam.apps.googleusercontent.com">
 		<link rel="icon" type="image/png" href="images/favicon.ico"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
@@ -32,6 +34,9 @@
 				<div class="inner">
 					<header class="major special">
 						<h1>Database</h1>
+						<p id="profileName">Sign in to Continue.</p>
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+						<a href="#" onclick="signOut();">Sign out</a>
 						<p>Get and Post Data using our Panel below</p>
 					</header>
 				</div>
@@ -39,6 +44,7 @@
 
 
 		<!-- Scripts -->
+			<script src="https://apis.google.com/js/platform.js" async defer></script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
